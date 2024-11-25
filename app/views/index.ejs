@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="/css/guess_game.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="top-layer">
+        <div class="button">
+            <button class="again">Again!</button>
+        </div>
+        <p class="range">(Between 1 and 20)</p>
+    </div>
+
+    <div class="middle-layer">
+        <h1>Guess My Number!</h1>
+        <div class="ans">
+            <div class="line"></div>
+            <button class="value">?</button>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="bottom-left">
+            <input type="number" title="input a number" class="input">
+            <button class="check">Check!</button>
+        </div>
+
+        <div class="bottom-right">
+            <p class="msg">Start guessing ...</p>
+            <p>💯 Score: <span class="score">20</span></p>
+            <p>🎖️ Highscore: <span class="highscore">0</span></p>
+        </div>
+    </div>
+
+    <script src="/js/guess_game.js"></script>
+</body>
+</html>

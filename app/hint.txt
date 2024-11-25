@@ -1,0 +1,10 @@
+app/
+├── public/                # Static files (CSS, JS, images)
+│   ├── css/
+│   │   └── guess_game.css
+│   └── js/
+│       └── guess_game.js
+├── views/                 # EJS templates
+│   └── index.ejs
+├── app.js                 # Main Express app file
+└── package.json           # Dependencies and scripts
