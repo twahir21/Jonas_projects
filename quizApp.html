@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .correct{
+            color: #0a9e0a;
+        }
+        .wrong{
+            color: red;
+        }
+        .result{
+            font-size: 18px;
+        }
+        button{
+            margin: 20px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Quiz App</h2>
+    <form action="#" id="quiz">
+        <div class="qns">
+            <p>What is my age?</p>
+            <input type="radio" name="age" title="age" value="12">
+            <label for="12">12</label>
+            <input type="radio" name="age" title="age" value="13">
+            <label for="13">13</label>
+            <input type="radio" name="age" title="age" value="14">
+            <label for="14">14</label>
+            <input type="radio" name="age" title="age" value="15">
+            <label for="15">15</label>
+            <input type="radio" name="age" title="age" value="16">
+            <label for="16">16</label>
+        </div>
+    </form>
+    <button>Submit</button>
+    <p class="result"></p>
+</body>
+
+<script>
+    const form = document.getElementById("quiz")
+    const ages = document.querySelectorAll("input");
+    const result = document.querySelector(".result")
+
+    const button = document.querySelector("button");
+    
+
+    button.addEventListener("click", () => {
+        for(let age of ages){
+
+        if(age.checked){
+            if(Number(age.value) === 15){
+            result.classList.add("correct")
+            result.classList.remove("wrong")
+            result.innerHTML = "Correct Answer";
+            break;
+        }
+        else{
+            result.classList.remove("correct")
+            result.classList.add("wrong")
+            result.innerHTML = "Wrong Answer"
+        }          
+        }
+    }
+    })
+
+
+
+</script>
+</html>
